@@ -1,155 +1,1039 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Akter | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shordarsha Medicine Center</title>
+    <meta name="description" content="Shordarsha Medicine Center - আপনার বিশ্বস্ত ঔষধ ও স্বাস্থ্যসেবা কেন্দ্র।">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green: #e6355b;
+            --dark: #064e3b;
+            --light: #e9fff4;
+            --mint: #d2f7e5;
+            --text: #193b32;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: #f4fbf7;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, .96);
+            box-shadow: 0 4px 25px rgba(0, 70, 45, .07);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            min-height: 78px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 29px;
+            background: linear-gradient(135deg, #0ab678, #075e46);
+            box-shadow: 0 7px 18px #087f5b38;
+        }
+
+        .brand h2 {
+            font: 800 19px 'Poppins', sans-serif;
+            line-height: 1.25;
+        }
+
+        .brand span {
+            display: block;
+            font-size: 12px;
+            color: #6a8c7e;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #315448;
+            font-size: 16px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #0aa36d;
+        }
+
+        .nav-contact {
+            background: var(--green);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+
+
+        .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 250px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.04);
+}
+
+@media (max-width: 540px) {
+    .brand-logo {
+        width: 210px;
+        height: 65px;
+    }
+}
+        /* Hero */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 75px 0 85px;
+            background:
+                radial-gradient(circle at 85% 20%, #b9f2d4 0, transparent 30%),
+                   radial-gradient(circle at 85% 20%, #b9f2d4 0, transparent 30%),
+
+                linear-gradient(120deg, #e9fff3, #f6fffa 55%, #dcf8e9);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            border: 50px solid #ffffff52;
+            border-radius: 50%;
+            right: -130px;
+            bottom: -180px;
+        }
+
+        .hero-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #087f5b;
+            background: #c9f4dc;
+            border: 1px solid #b3e8c9;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 53px);
+            line-height: 1.25;
+            color: #073e2d;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #079766;
+        }
+
+        .hero p {
+            max-width: 560px;
+            color: #557568;
+            font-size: 18px;
+            margin-bottom: 28px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 12px 23px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            color: white;
+            background: linear-gradient(135deg, #1055d3, #a9ac20);
+            box-shadow: 0 8px 20px #087f5b30;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px #087f5b40;
+        }
+
+        .btn-outline {
+            color: var(--green);
+            border: 2px solid #0b9d6b;
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: #e4f9ed;
+            transform: translateY(-3px);
+        }
+
+
+
+
+        
+/* HERO PROFILE DESIGN */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.profile-frame {
+    position: relative;
+    width: 390px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Green Circle Background */
+.circle-bg {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0bb878, #d5f9e5);
+    border: 12px solid #ffffff;
+    box-shadow: 0 20px 55px rgba(0, 100, 60, 0.15);
+    animation: circleFloat 5s ease-in-out infinite;
+}
+
+/* Profile Image */
+.profile-image {
+    position: absolute;
+    z-index: 2;
+    width: 285px;
+    height: 370px;
+    bottom: 35px;
+    overflow: hidden;
+    border-radius: 48% 48% 20px 20px;
+    border: 6px solid white;
+    box-shadow: 0 15px 40px rgba(0, 80, 50, 0.20);
+    background: #d8f7e6;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.profile-frame:hover .profile-image img {
+    transform: scale(1.05);
+}
+
+/* Pharmacy Badge */
+.medical-badge {
+    position: absolute;
+    z-index: 4;
+    left: -12px;
+    bottom: 15px;
+    width: 175px;
+    padding: 14px 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.96);
+    border: 2px solid #d1f5df;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(0, 80, 50, 0.15);
+    animation: badgeFloat 4s ease-in-out infinite;
+}
+
+.medical-badge span {
+    font-size: 42px;
+}
+
+.medical-badge h3 {
+    color: #087f5b;
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.medical-badge p {
+    color: #426c58;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Floating Icons */
+.floating-icon {
+    position: absolute;
+    z-index: 5;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #e2f8e9;
+    border-radius: 22px;
+    font-size: 30px;
+    box-shadow: 0 10px 30px rgba(0, 80, 50, 0.12);
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.icon-one {
+    top: 45px;
+    right: 5px;
+}
+
+.icon-two {
+    bottom: 5px;
+    right: 45px;
+    animation-delay: 1s;
+}
+
+.icon-three {
+    top: 120px;
+    left: 0;
+    color: #0a9c67;
+    font-size: 35px;
+    animation-delay: 1.5s;
+}
+
+/* Leaves */
+.leaf {
+    position: absolute;
+    z-index: 1;
+    font-size: 48px;
+    opacity: 0.85;
+}
+
+.leaf-one {
+    bottom: 15px;
+    right: 10px;
+    transform: rotate(-30deg);
+}
+
+.leaf-two {
+    bottom: 45px;
+    left: 55px;
+    transform: rotate(25deg);
+}
+
+/* Animations */
+@keyframes circleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes badgeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    .hero-visual {
+        min-height: 400px;
+    }
+
+    .profile-frame {
+        transform: scale(0.9);
+    }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .profile-frame {
+        transform: scale(0.78);
+        transform-origin: center center;
+        margin: -30px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .circle-bg,
+    .medical-badge,
+    .floating-icon {
+        animation: none;
+    }
+}
+
+
+        /* Hero visual */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 320px;
+        }
+
+        .medical-card {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #ffffff, #d2f8e4);
+            border: 10px solid #ffffffb5;
+            box-shadow: 0 25px 60px #075e4620;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .medical-icon {
+            font-size: 95px;
+            line-height: 1.2;
+            filter: drop-shadow(0 8px 8px #087f5b20);
+        }
+
+        .medical-card strong {
+            font: 700 17px 'Poppins', sans-serif;
+            color: #087f5b;
+            text-align: center;
+        }
+
+        .bubble {
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+            background: white;
+            font-size: 30px;
+            box-shadow: 0 8px 25px #075e4620;
+        }
+
+        .bubble-one {
+            top: 5px;
+            right: 5px;
+        }
+
+        .bubble-two {
+            bottom: 5px;
+            left: 0;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* Features */
+        .features {
+            padding: 65px 0;
+            background: white;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .section-heading span {
+            color: #0a9b68;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .section-heading h2 {
+            color: #104d39;
+            font-size: clamp(25px, 4vw, 35px);
+            margin-top: 5px;
+        }
+
+        .section-heading p {
+            color: #779085;
+            margin-top: 8px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .feature-card {
+            padding: 28px 20px;
+            border: 1px solid #e1f2e8;
+            border-radius: 20px;
+            background: #fbfffc;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: #9cdbb7;
+            box-shadow: 0 15px 35px #075e4610;
+        }
+
+        .feature-icon {
+            width: 67px;
+            height: 67px;
+            margin: 0 auto 15px;
+            display: grid;
+            place-items: center;
+            border-radius: 20px;
+            background: #ddf8e8;
+            font-size: 32px;
+        }
+
+        .feature-card h3 {
+            color: #126347;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #779085;
+            font-size: 15px;
+        }
+
+        /* About */
+        .about {
+            padding: 70px 0;
+            background: linear-gradient(120deg, #effcf4, #e5f8ee);
+        }
+
+        .about-box {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-box h2 {
+            font-size: 32px;
+            color: #104d39;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            font-size: 17px;
+            color: #5d7c6e;
+        }
+
+        .promise {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #087f5b;
+            background: white;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 23px 18px;
+            background: #f5fcf7;
+            border: 1px solid #e1f1e7;
+            border-radius: 17px;
+            transition: .3s;
+            min-width: 0;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 28px #075e4615;
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: #d9f5e4;
+            font-size: 23px;
+        }
+
+        .contact-card h3 {
+            color: #116347;
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: #6a8477;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: #079766;
+        }
+
+        /* Footer */
+        footer {
+            background: #073e2d;
+            color: #d9f6e5;
+            padding: 28px 0;
+            text-align: center;
+        }
+
+        footer h3 {
+            font: 700 20px 'Poppins', sans-serif;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #b7d8c4;
+        }
+
+        .footer-heart {
+            color: #7ce5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                min-height: 270px;
+            }
+
+            .medical-card {
+                width: 230px;
+                height: 230px;
+            }
+
+            .feature-grid,
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 540px) {
+            .navbar {
+                padding: 12px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .brand {
+                margin-right: auto;
+            }
+
+            .brand h2 {
+                font-size: 15px;
+            }
+
+            .logo {
+                width: 43px;
+                height: 43px;
+                font-size: 24px;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .nav-contact {
+                padding: 6px 12px;
+            }
+
+            .hero {
+                padding: 55px 0;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .feature-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features,
+            .about,
+            .contact {
+                padding: 50px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header class="hero">
-        <img src="pic.png" alt="Beauty Akter">
-        <h1>Beauty Akter</h1>
-        <h3>Frontend Web Developer</h3>
-        <p>HTML | CSS | JavaScript | React</p>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a class="brand" href="#home">
+                <img src="mmm.png" alt="Shordarsha Medicine Center Logo" class="brand-logo">
+            </a>
+        
+            <nav class="nav-links">
+                <a href="#home">হোম</a>
+                <a href="#services">সেবাসমূহ</a>
+                <a href="#about">আমাদের সম্পর্কে</a>
+                <a href="#contact" class="nav-contact">যোগাযোগ</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am a passionate Frontend Developer who enjoys creating responsive and modern websites.</p>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div>
+                <span class="tag">✦ আপনার বিশ্বস্ত স্বাস্থ্যসেবা কেন্দ্র</span>
+
+                <h1>
+                    স্বাগতম <span>Sordarsha</span><br>
+                    Medicine Center-এ
+                </h1>
+
+                <p>
+                    আপনার সুস্বাস্থ্য ও সুন্দর জীবনের প্রত্যাশায়
+                    আমরা প্রতিশ্রুতিবদ্ধ। প্রয়োজনীয় ঔষধ ও
+                    স্বাস্থ্যসেবায় আমরা আপনার পাশে আছি।
+                </p>
+
+                <div class="buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        ☎ যোগাযোগ করুন
+                    </a>
+                    <a href="#services" class="btn btn-outline">
+                        ✚ আমাদের সেবা
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div class="hero-visual">
+                <div class="medical-card">
+                    <div class="bubble bubble-one">💊</div>
+                    <div class="medical-icon">🏥</div>
+                    <strong>Sordarsha <br>Medicine Center</strong>
+                    <div class="bubble bubble-two">🩺</div>
+                </div>
+            </div> -->
+
+        <!-- </div> -->
+
+        <div class="hero-visual">
+            <div class="profile-frame">
+        
+                <!-- Decorative Circle -->
+                <div class="circle-bg"></div>
+        
+                <!-- Your Photo -->
+                <div class="profile-image">
+                    <img src="beauty.png" alt="Shordarsha Medicine Center">
+                </div>
+        
+                <!-- Pharmacy Badge -->
+                <div class="medical-badge">
+                    <span>🏥</span>
+                    <h3>Shordarsha</h3>
+                    <p>Medicine Center</p>
+                </div>
+        
+                <!-- Floating Icons -->
+                <div class="floating-icon icon-one">💊</div>
+                <div class="floating-icon icon-two">🩺</div>
+                <div class="floating-icon icon-three">✚</div>
+        
+                <!-- Decorative Leaves -->
+                <div class="leaf leaf-one">🌿</div>
+                <div class="leaf leaf-two">🍃</div>
+        
+            </div>
+        </div>
     </section>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">React</div>
-        <div class="skill">Git & GitHub</div>
-    </section>
+    <!-- Services -->
+    <section class="features" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <span>OUR SERVICES</span>
+                <h2>আমাদের সেবাসমূহ</h2>
+                <p>আপনার প্রয়োজন অনুযায়ী আমাদের সেবাগুলো</p>
+            </div>
 
-    <section class="projects">
-        <h2>Projects</h2>
+            <div class="feature-grid">
 
-  
-        <div class="project-grid">
-
-                <div class="card">
-                    <h3>🌐 Portfolio Website</h3>
-                    <p>
-                        A fully responsive personal portfolio website built using
-                        HTML, CSS, and JavaScript with a modern user interface.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <h3>ঔষধ সেবা</h3>
+                    <p>প্রয়োজনীয় ঔষধ সরবরাহে আমরা যত্নশীল।</p>
                 </div>
 
-                <div class="card">
-                    <h3>💊 Pharmacy Website</h3>
-                    <p>
-                        Responsive pharmacy website featuring medicine categories,
-                        contact information, and an attractive landing page.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
+                <div class="feature-card">
+                    <div class="feature-icon">🩺</div>
+                    <h3>স্বাস্থ্য পরামর্শ</h3>
+                    <p>ঔষধ ব্যবহারের বিষয়ে প্রয়োজনীয় তথ্য ও নির্দেশনা।</p>
                 </div>
 
-                <div class="card">
-                    <h3>📝 Guest Post Marketplace</h3>
-                    <p>
-                        Marketplace platform where buyers can purchase guest posts
-                        and sellers can list websites for publishing.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>স্বাস্থ্য সচেতনতা</h3>
+                    <p>সুস্থ জীবনযাপনে সচেতনতামূলক সহযোগিতা।</p>
                 </div>
 
-                <div class="card">
-                    <h3>🎉 Eid Poster Design</h3>
-                    <p>
-                        Creative Eid greeting poster designed using HTML and CSS
-                        with beautiful typography and animations.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
+                <div class="feature-card">
+                    <div class="feature-icon">🧴</div>
+                    <h3>হেলথ কেয়ার</h3>
+                    <p>প্রয়োজনীয় স্বাস্থ্যসামগ্রী ও পরিচর্যার পণ্য।</p>
                 </div>
 
-                <div class="card">
-                    <h3>🏢 Business Landing Page</h3>
-                    <p>
-                        Modern business landing page with hero section, services,
-                        testimonials, and responsive layout.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>বিশ্বস্ত সেবা</h3>
+                    <p>গ্রাহকদের সঙ্গে আন্তরিকতা ও দায়িত্বশীল আচরণ।</p>
                 </div>
 
-                <div class="card">
-                    <h3>🔐 Login System UI</h3>
-                    <p>
-                        Beautiful login and registration page with validation,
-                        responsive design, and modern UI components.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
-                </div>
-
-                <div class="card">
-                    <h3>📊 Admin Dashboard</h3>
-                    <p>
-                        Professional admin dashboard with sidebar, charts, cards,
-                        user management, and analytics interface.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
-                </div>
-
-                <div class="card">
-                    <h3>🛒 E-commerce UI</h3>
-                    <p>
-                        Responsive online shopping interface with product cards,
-                        cart page, checkout page, and clean design.
-                    </p>
-                    <!-- <a href="#" target="_blank">Live Demo</a>
-                    <a href="#" target="_blank">GitHub</a> -->
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>আপনার সুস্বাস্থ্য</h3>
+                    <p>আপনার স্বাস্থ্যসচেতনতার যাত্রায় পাশে থাকার অঙ্গীকার।</p>
                 </div>
 
             </div>
-        </section>
-
+        </div>
     </section>
 
-    <section class="contact">
-        <h2>Contact</h2>
-
-        <p>
-            📧 Email:
-            <a href="mailto:hasanshimran7@gmail.com">
-                hasanshimran7@gmail.com
-            </a>
-        </p>
-
-        <p>
-            💼 LinkedIn:
-            <a href="https://www.linkedin.com/in/shimran-hasan-697161409?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                target="_blank">
-                My LinkedIn
-            </a>
-        </p>
-
-        <p>
-            💻 GitHub:
-            <a href="https://github.com/beautyhasan34" target="_blank">
-                github.com/beautyhasan34
-            </a>
-        </p>
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-box">
+                <span class="tag">ABOUT US</span>
+                <h2>আমাদের সম্পর্কে</h2>
+                <p>
+                    Shordarsha Medicine Center একটি ঔষধ ও
+                    স্বাস্থ্যসেবা কেন্দ্র। আমরা গ্রাহকদের
+                    প্রয়োজনকে গুরুত্ব দিয়ে নির্ভরযোগ্য ঔষধ
+                    ও স্বাস্থ্যসামগ্রী সরবরাহের চেষ্টা করি।
+                    আপনার সুস্বাস্থ্যই আমাদের অঙ্গীকার।
+                </p>
+                <div class="promise">💚 Your Health, Our Commitment.</div>
+            </div>
+        </div>
     </section>
 
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <span>GET IN TOUCH</span>
+                <h2>📞 যোগাযোগ করুন</h2>
+                <p>যেকোনো প্রয়োজনে আমাদের সঙ্গে যোগাযোগ করুন</p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>ঠিকানা</h3>
+                        <p>Tengrabazar, Moulvibazar, Sylhet, Bangladesh</p>
+                    </div>
+                </div>
+<div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+        <h3>ইমেইল</h3>
+        <a href="mailto:nazmulislam205805@gmail.com">
+            nazmulislam205805@gmail.com
+        </a>
+    </div>
+</div>
+
+<div class="contact-card">
+    <div class="contact-icon">📱</div>
+    <div>
+        <h3>ফোন নম্বর</h3>
+        <a href="tel:+8801712205805">
+            +8801712-205805
+        </a>
+    </div>
+</div>
+
+        <div class="buttons" style="margin-top:30px; justify-content:center;">
+        
+            <a class="btn btn-primary" href="https://wa.me/8801712205805" target="_blank" rel="noopener noreferrer">
+        
+                💬 WhatsApp করুন
+        
+            </a>
+        
+        </div>
+                <a class="btn btn-outline"
+                    href="https://www.google.com/maps/search/?api=1&query=Tengrabazar%2C+Moulvibazar%2C+Sylhet"
+                    target="_blank" rel="noopener noreferrer">
+                    📍 Google Maps
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        © 2026 Beauty Akter
+        <div class="container">
+            <h3>✚ Shordarsha Medicine Center</h3>
+            <p>আপনার সুস্বাস্থ্য, আমাদের অঙ্গীকার।</p>
+            <p style="margin-top:12px;">
+                <span class="footer-heart">💚</span>
+                Your Health, Our Commitment.
+            </p>
+            <p style="margin-top:10px;">
+                © 2026 Shordarsha Medicine Center. All Rights Reserved.
+            </p>
+        </div>
     </footer>
 
 </body>
