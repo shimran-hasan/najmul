@@ -684,7 +684,170 @@
         }
 
         /* Footer */
-        footer {
+
+        
+/* ================================
+   PHARMACY FOOTER
+================================ */
+
+.pharmacy-footer {
+    background: linear-gradient(135deg, #ecfdf5, #ffffff);
+    padding: 55px 20px 25px;
+    border-top: 4px solid #10b981;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative circles */
+.pharmacy-footer::before,
+.pharmacy-footer::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.pharmacy-footer::before {
+    left: -80px;
+    bottom: -80px;
+}
+
+.pharmacy-footer::after {
+    right: -80px;
+    top: -80px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo + Brand */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+.footer-brand-text {
+    text-align: left;
+}
+
+.footer-brand-text h3 {
+    margin: 0 0 8px;
+    color: #065f46;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.footer-brand-text p {
+    margin: 0;
+    color: #047857;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* English tagline */
+.footer-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #047857;
+    color: white;
+    padding: 11px 25px;
+    border-radius: 50px;
+    margin: 10px 0 30px;
+    box-shadow: 0 8px 20px rgba(4, 120, 87, 0.2);
+}
+
+.footer-tagline span {
+    font-size: 20px;
+}
+
+.footer-tagline p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(6, 95, 70, 0.2);
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #52756b;
+    font-size: 14px;
+}
+
+.footer-bottom strong {
+    color: #047857;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    .pharmacy-footer {
+        padding: 40px 15px 20px;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer-brand-text {
+        text-align: center;
+    }
+
+    .footer-brand-text h3 {
+        font-size: 21px;
+    }
+
+    .footer-brand-text p {
+        font-size: 14px;
+    }
+
+    .footer-tagline {
+        padding: 9px 18px;
+    }
+
+    .footer-tagline p {
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+}
+
+        /* footer {
             background: #073e2d;
             color: #d9f6e5;
             padding: 28px 0;
@@ -704,7 +867,7 @@
 
         .footer-heart {
             color: #7ce5a6;
-        }
+        } */
 
         /* Responsive */
         @media (max-width: 800px) {
@@ -812,9 +975,13 @@
     <!-- Header -->
     <header>
         <div class="container navbar">
-            <a class="brand" href="#home">
-                <img src="mmm.png" alt="Shordarsha Medicine Center Logo" class="brand-logo">
-            </a>
+  
+
+<a class="brand" href="#home">
+    <img src="nnn.png" alt="Sordarsha Pharmacy Logo" class="brand-logo">
+   
+</a>
+    
         
             <nav class="nav-links">
                 <a href="#home">হোম</a>
@@ -874,14 +1041,14 @@
         
                 <!-- Your Photo -->
                 <div class="profile-image">
-                    <img src="beauty.png" alt="Shordarsha Medicine Center">
+                    <img src="beauty.png" alt="Shordarsha Pharmacy">
                 </div>
         
                 <!-- Pharmacy Badge -->
                 <div class="medical-badge">
                     <span>🏥</span>
-                    <h3>Shordarsha</h3>
-                    <p>Medicine Center</p>
+                    <h3> Messrs Shordarsha</h3>
+                    <p> Pharmacy</p>
                 </div>
         
                 <!-- Floating Icons -->
@@ -1024,19 +1191,52 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <!-- <footer>
         <div class="container">
-            <h3>✚ Shordarsha Medicine Center</h3>
+            <h3>✚  Messrs Shordarsha Pharmacy</h3>
             <p>আপনার সুস্বাস্থ্য, আমাদের অঙ্গীকার।</p>
             <p style="margin-top:12px;">
                 <span class="footer-heart">💚</span>
                 Your Health, Our Commitment.
             </p>
             <p style="margin-top:10px;">
-                © 2026 Shordarsha Medicine Center. All Rights Reserved.
+                © 2026 Messrs Shordarsha Pharmacy. All Rights Reserved.
             </p>
         </div>
+    </footer> -->
+
+    
+    <!-- Footer -->
+    <footer class="pharmacy-footer">
+        <div class="footer-container">
+    
+            <!-- Logo & Brand -->
+            <div class="footer-brand">
+                <img src="mmm.png" alt="Messrs Shordarsha Pharmacy Logo" class="footer-logo">
+    
+                <div class="footer-brand-text">
+                    <h3>Messrs Shordarsha Pharmacy</h3>
+                    <p>আপনার সুস্বাস্থ্য, আমাদের অঙ্গীকার।</p>
+                </div>
+            </div>
+    
+            <!-- Tagline -->
+            <div class="footer-tagline">
+                <span>💚</span>
+                <p>Your Health, Our Commitment.</p>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>
+                    © 2026 <strong>Messrs Shordarsha Pharmacy</strong>.
+                    All Rights Reserved.
+                </p>
+            </div>
+    
+        </div>
     </footer>
+    
 
 </body>
 
